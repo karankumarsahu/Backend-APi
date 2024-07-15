@@ -1,0 +1,36 @@
+version: '3.8'
+
+services:
+  app:
+    build: .
+    ports:
+      - "3000:3000"
+    volumes:
+      - .:/usr/src/app
+    environment:
+      - .env
+
+  db:
+    image: mongo
+    ports:
+      - "27017:27017"
+
+  twilio:
+    image: twilio
+    ports:
+      - "5000:5000"
+
+  jsonwebtoken:
+    image: jwt
+    ports:
+      - "5001:5001"
+
+  express:
+    image: express
+    ports:
+      - "5002:5002"
+
+  dotenv:
+    image: dotenv
+    ports:
+      - "5003:5003"
