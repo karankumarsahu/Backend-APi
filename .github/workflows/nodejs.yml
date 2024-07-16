@@ -35,4 +35,4 @@ jobs:
       with:
         context: .
         push: true
-        tags: user/backend-api:latest
+        tags: karansahu8825/backend-api:latest
